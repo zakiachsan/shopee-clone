@@ -15,7 +15,7 @@ import Header from "@/app/components/layout/Header";
 import BottomNav from "@/app/components/layout/BottomNav";
 import Footer from "@/app/components/layout/Footer";
 import ProductCard from "@/app/components/shared/ProductCard";
-import { products, formatPrice } from "@/lib/data";
+import { allProducts, formatPrice } from "@/lib/data";
 
 const categoryData: Record<string, { name: string; subcategories: string[]; banner: string }> = {
   elektronik: {
@@ -104,12 +104,8 @@ export default function CategoryClient({ slug }: CategoryClientProps) {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
   const filteredProducts = useMemo(() => {
-    let result = products.filter((p) =>
-      p.name.toLowerCase().includes(category.name.toLowerCase()) ||
-      category.subcategories.some((sub) =>
-        p.name.toLowerCase().includes(sub.toLowerCase())
-      ) ||
-      slug === "elektronik"
+    let result = allProducts.filter((p) =>
+      p.categories?.includes(safeSlug) || false
     );
 
     if (selectedPrice !== null) {
@@ -133,7 +129,7 @@ export default function CategoryClient({ slug }: CategoryClientProps) {
         result = [...result].sort((a, b) => b.price - a.price);
         break;
       case "terlaris":
-        result = [...result].sort(() => Math.random() - 0.5);
+        result = [...result].sort((a, b) => (b.id % 7) - (a.id % 7));
         break;
       case "terbaru":
         result = [...result].reverse();
@@ -188,25 +184,6 @@ export default function CategoryClient({ slug }: CategoryClientProps) {
                 <h1 className="text-white text-2xl md:text-3xl font-bold">{category.name}</h1>
                 <p className="text-white/80 text-sm mt-1">{filteredProducts.length} Produk ditemukan</p>
               </div>
-            </div>
-          </div>
-
-          {/* Sub Categories */}
-          <div className="bg-white rounded-sm p-3 mb-3">
-            <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide pb-1">
-              {category.subcategories.map((sub) => (
-                <button
-                  key={sub}
-                  onClick={() => setSelectedSub(sub)}
-                  className={`whitespace-nowrap px-4 py-1.5 rounded-full text-xs transition-colors ${
-                    selectedSub === sub
-                      ? "bg-shopee-orange text-white"
-                      : "bg-shopee-gray text-shopee-text hover:bg-shopee-orange-light hover:text-shopee-orange"
-                  }`}
-                >
-                  {sub}
-                </button>
-              ))}
             </div>
           </div>
 

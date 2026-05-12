@@ -67,6 +67,7 @@ export interface Product {
   discount?: number;
   badge?: string;
   badgeColor?: string;
+  categories?: string[];
 }
 
 export const flashSaleProducts: Product[] = [
@@ -80,6 +81,7 @@ export const flashSaleProducts: Product[] = [
     sold: "5.2rb",
     location: "Jakarta",
     discount: 67,
+    categories: ["elektronik", "handphone"],
   },
   {
     id: 2,
@@ -91,6 +93,7 @@ export const flashSaleProducts: Product[] = [
     sold: "3.1rb",
     location: "Surabaya",
     discount: 67,
+    categories: ["elektronik", "handphone"],
   },
   {
     id: 3,
@@ -102,6 +105,7 @@ export const flashSaleProducts: Product[] = [
     sold: "8.5rb",
     location: "Bandung",
     discount: 63,
+    categories: ["elektronik", "handphone"],
   },
   {
     id: 4,
@@ -113,6 +117,7 @@ export const flashSaleProducts: Product[] = [
     sold: "12rb",
     location: "Jakarta",
     discount: 57,
+    categories: ["elektronik", "handphone"],
   },
   {
     id: 5,
@@ -124,6 +129,7 @@ export const flashSaleProducts: Product[] = [
     sold: "2.8rb",
     location: "Tangerang",
     discount: 58,
+    categories: ["komputer"],
   },
   {
     id: 6,
@@ -135,6 +141,7 @@ export const flashSaleProducts: Product[] = [
     sold: "4.3rb",
     location: "Jakarta",
     discount: 58,
+    categories: ["komputer"],
   },
 ];
 
@@ -151,6 +158,7 @@ export const products: Product[] = [
     discount: 49,
     badge: "Star+",
     badgeColor: "bg-yellow-400",
+    categories: ["pakaian-pria"],
   },
   {
     id: 102,
@@ -164,6 +172,7 @@ export const products: Product[] = [
     discount: 50,
     badge: "Mall",
     badgeColor: "bg-shopee-green",
+    categories: ["pakaian-pria", "pakaian-wanita"],
   },
   {
     id: 103,
@@ -175,6 +184,7 @@ export const products: Product[] = [
     sold: "3.2rb",
     location: "Surabaya",
     discount: 58,
+    categories: ["tas-sepatu", "olahraga"],
   },
   {
     id: 104,
@@ -188,6 +198,7 @@ export const products: Product[] = [
     discount: 50,
     badge: "Star+",
     badgeColor: "bg-yellow-400",
+    categories: ["tas-sepatu", "komputer"],
   },
   {
     id: 105,
@@ -199,6 +210,7 @@ export const products: Product[] = [
     sold: "15rb+",
     location: "Jakarta",
     discount: 53,
+    categories: ["kecantikan"],
   },
   {
     id: 106,
@@ -210,6 +222,7 @@ export const products: Product[] = [
     sold: "6.4rb",
     location: "Semarang",
     discount: 55,
+    categories: ["rumah-tangga"],
   },
   {
     id: 107,
@@ -223,6 +236,7 @@ export const products: Product[] = [
     discount: 53,
     badge: "Star+",
     badgeColor: "bg-yellow-400",
+    categories: ["mainan"],
   },
   {
     id: 108,
@@ -234,6 +248,7 @@ export const products: Product[] = [
     sold: "4.5rb",
     location: "Jakarta",
     discount: 60,
+    categories: ["elektronik", "kesehatan"],
   },
   {
     id: 109,
@@ -247,6 +262,7 @@ export const products: Product[] = [
     discount: 56,
     badge: "Mall",
     badgeColor: "bg-shopee-green",
+    categories: ["elektronik", "tas-sepatu"],
   },
   {
     id: 110,
@@ -258,6 +274,7 @@ export const products: Product[] = [
     sold: "2.9rb",
     location: "Jakarta",
     discount: 52,
+    categories: ["kecantikan"],
   },
   {
     id: 111,
@@ -269,6 +286,7 @@ export const products: Product[] = [
     sold: "3.7rb",
     location: "Bandung",
     discount: 52,
+    categories: ["pakaian-pria"],
   },
   {
     id: 112,
@@ -280,6 +298,7 @@ export const products: Product[] = [
     sold: "5.5rb",
     location: "Jakarta",
     discount: 53,
+    categories: ["pakaian-wanita"],
   },
 ];
 
@@ -294,6 +313,7 @@ export const dealsProducts: Product[] = [
     sold: "25rb+",
     location: "Jakarta",
     discount: 67,
+    categories: ["rumah-tangga", "makanan"],
   },
   {
     id: 202,
@@ -305,6 +325,7 @@ export const dealsProducts: Product[] = [
     sold: "18rb+",
     location: "Surabaya",
     discount: 70,
+    categories: ["rumah-tangga"],
   },
   {
     id: 203,
@@ -316,6 +337,7 @@ export const dealsProducts: Product[] = [
     sold: "32rb+",
     location: "Bandung",
     discount: 69,
+    categories: ["otomotif", "rumah-tangga"],
   },
   {
     id: 204,
@@ -327,6 +349,7 @@ export const dealsProducts: Product[] = [
     sold: "45rb+",
     location: "Jakarta",
     discount: 67,
+    categories: ["kecantikan", "kesehatan", "rumah-tangga"],
   },
   {
     id: 205,
@@ -338,6 +361,7 @@ export const dealsProducts: Product[] = [
     sold: "12rb+",
     location: "Semarang",
     discount: 53,
+    categories: ["kecantikan", "kesehatan", "rumah-tangga"],
   },
   {
     id: 206,
@@ -349,6 +373,7 @@ export const dealsProducts: Product[] = [
     sold: "28rb+",
     location: "Jakarta",
     discount: 65,
+    categories: ["hobi", "komputer"],
   },
   {
     id: 207,
@@ -360,6 +385,7 @@ export const dealsProducts: Product[] = [
     sold: "15rb+",
     location: "Surabaya",
     discount: 53,
+    categories: ["kecantikan", "kesehatan"],
   },
   {
     id: 208,
@@ -371,6 +397,7 @@ export const dealsProducts: Product[] = [
     sold: "22rb+",
     location: "Bandung",
     discount: 63,
+    categories: ["kecantikan", "kesehatan", "mainan"],
   },
   {
     id: 209,
@@ -382,6 +409,7 @@ export const dealsProducts: Product[] = [
     sold: "50rb+",
     location: "Jakarta",
     discount: 75,
+    categories: ["kecantikan", "kesehatan"],
   },
   {
     id: 210,
@@ -393,6 +421,7 @@ export const dealsProducts: Product[] = [
     sold: "10rb+",
     location: "Tangerang",
     discount: 55,
+    categories: ["rumah-tangga", "makanan"],
   },
   {
     id: 211,
@@ -404,6 +433,7 @@ export const dealsProducts: Product[] = [
     sold: "19rb+",
     location: "Jakarta",
     discount: 61,
+    categories: ["rumah-tangga", "makanan"],
   },
   {
     id: 212,
@@ -415,6 +445,7 @@ export const dealsProducts: Product[] = [
     sold: "14rb+",
     location: "Semarang",
     discount: 63,
+    categories: ["hobi", "komputer"],
   },
 ];
 
@@ -426,3 +457,9 @@ export const formatPrice = (price: number) => {
     maximumFractionDigits: 0,
   }).format(price);
 };
+
+export const allProducts: Product[] = [
+  ...flashSaleProducts,
+  ...products,
+  ...dealsProducts,
+];

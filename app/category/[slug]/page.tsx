@@ -20,6 +20,7 @@ export function generateStaticParams() {
   ];
 }
 
-export default function CategoryPage({ params }: { params: { slug: string } }) {
-  return <CategoryClient slug={params.slug} />;
+export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  return <CategoryClient slug={slug} />;
 }
