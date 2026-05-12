@@ -101,7 +101,6 @@ export default function CategoryClient({ slug }: CategoryClientProps) {
   const [selectedPrice, setSelectedPrice] = useState<number | null>(null);
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-  const [showMobileFilter, setShowMobileFilter] = useState(false);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
   const filteredProducts = useMemo(() => {
@@ -164,15 +163,13 @@ export default function CategoryClient({ slug }: CategoryClientProps) {
           <Link href="/" className="p-1">
             <ChevronLeft className="w-5 h-5 text-shopee-text" />
           </Link>
-          <div className="flex-1">
-            <h1 className="text-base font-semibold text-shopee-text">{category.name}</h1>
-          </div>
+          <h1 className="flex-1 text-base font-semibold text-shopee-text">{category.name}</h1>
         </div>
 
-        {/* Mobile Category Title */}
-        <div className="lg:hidden bg-white px-4 py-3 border-b border-shopee-border">
-          <h2 className="text-lg font-bold text-shopee-text">{category.name}</h2>
-          <p className="text-xs text-shopee-text-secondary mt-0.5">{filteredProducts.length} Produk ditemukan</p>
+        {/* Mobile Category Info */}
+        <div className="lg:hidden bg-white px-3 py-2 border-b border-shopee-border flex items-center justify-between">
+          <span className="text-sm font-bold text-shopee-text">{category.name}</span>
+          <span className="text-xs text-shopee-text-secondary">{filteredProducts.length} Produk</span>
         </div>
 
         <div className="max-w-[1200px] mx-auto px-0 lg:px-4 py-0 lg:py-4">
@@ -342,68 +339,6 @@ export default function CategoryClient({ slug }: CategoryClientProps) {
                     <List className="w-4 h-4" />
                   </button>
                 </div>
-              </div>
-
-              {/* Mobile Filter Button */}
-              <div className="lg:hidden px-3 mb-3">
-                <button
-                  onClick={() => setShowMobileFilter(!showMobileFilter)}
-                  className="w-full bg-white rounded-sm p-3 flex items-center justify-between text-sm text-shopee-text"
-                >
-                  <span className="flex items-center gap-2">
-                    <SlidersHorizontal className="w-4 h-4" />
-                    Filter
-                    {activeFiltersCount > 0 && (
-                      <span className="bg-shopee-orange text-white text-[10px] px-1.5 py-0.5 rounded-full">{activeFiltersCount}</span>
-                    )}
-                  </span>
-                  <ChevronRight className={`w-4 h-4 transition-transform ${showMobileFilter ? "rotate-90" : ""}`} />
-                </button>
-                {showMobileFilter && (
-                  <div className="bg-white rounded-sm mt-2 p-4 space-y-4">
-                    <div>
-                      <h4 className="text-sm font-medium mb-2">Harga</h4>
-                      <div className="space-y-2">
-                        {priceRanges.map((range, idx) => (
-                          <label key={idx} className="flex items-center gap-2">
-                            <input
-                              type="radio"
-                              name="mprice"
-                              checked={selectedPrice === idx}
-                              onChange={() => setSelectedPrice(idx)}
-                              className="w-4 h-4 accent-shopee-orange"
-                            />
-                            <span className="text-xs text-shopee-text">{range.label}</span>
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-medium mb-2">Lokasi</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {locations.map((loc) => (
-                          <button
-                            key={loc}
-                            onClick={() => setSelectedLocation(selectedLocation === loc ? null : loc)}
-                            className={`px-3 py-1 text-xs rounded-full border ${
-                              selectedLocation === loc
-                                ? "border-shopee-orange text-shopee-orange bg-shopee-orange-light"
-                                : "border-shopee-border text-shopee-text"
-                            }`}
-                          >
-                            {loc}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                    <button
-                      onClick={clearFilters}
-                      className="w-full py-2 bg-shopee-orange text-white text-sm rounded-sm"
-                    >
-                      Reset Filter
-                    </button>
-                  </div>
-                )}
               </div>
 
               {/* Products */}
