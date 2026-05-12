@@ -164,7 +164,15 @@ export default function CategoryClient({ slug }: CategoryClientProps) {
           <Link href="/" className="p-1">
             <ChevronLeft className="w-5 h-5 text-shopee-text" />
           </Link>
-          <span className="text-sm font-medium text-shopee-text">{category.name}</span>
+          <div className="flex-1">
+            <h1 className="text-base font-semibold text-shopee-text">{category.name}</h1>
+          </div>
+        </div>
+
+        {/* Mobile Category Title */}
+        <div className="lg:hidden bg-white px-4 py-3 border-b border-shopee-border">
+          <h2 className="text-lg font-bold text-shopee-text">{category.name}</h2>
+          <p className="text-xs text-shopee-text-secondary mt-0.5">{filteredProducts.length} Produk ditemukan</p>
         </div>
 
         <div className="max-w-[1200px] mx-auto px-0 lg:px-4 py-0 lg:py-4">

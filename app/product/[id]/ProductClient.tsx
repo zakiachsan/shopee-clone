@@ -39,7 +39,7 @@ export default function ProductClient({ id }: { id: number }) {
   return (
     <>
       <Header />
-      <main className="flex-1 bg-shopee-gray pb-16 lg:pb-0">
+      <main className="flex-1 bg-shopee-gray pb-28 lg:pb-0">
         <div className="max-w-[1200px] mx-auto px-0 lg:px-4 py-0 lg:py-4">
           {/* Breadcrumb */}
           <div className="hidden lg:flex items-center gap-1 text-xs text-shopee-text-secondary mb-3 px-1">
@@ -361,7 +361,7 @@ export default function ProductClient({ id }: { id: number }) {
       </main>
 
       {/* Mobile Sticky Actions */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-shopee-border z-[60] flex items-center h-14">
+      <div className="lg:hidden fixed bottom-14 left-0 right-0 bg-white border-t border-shopee-border z-[60] flex items-center h-14">
         <button className="flex-1 h-full bg-shopee-orange-light text-shopee-orange text-sm font-medium">
           Masukkan Keranjang
         </button>

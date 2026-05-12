@@ -101,7 +101,7 @@ export default function CartPage() {
   return (
     <>
       <Header />
-      <main className="flex-1 bg-shopee-gray pb-24 lg:pb-8">
+      <main className="flex-1 bg-shopee-gray pb-32 lg:pb-8">
         <div className="max-w-[1200px] mx-auto px-0 lg:px-4 py-0 lg:py-4">
           {/* Mobile Header */}
           <div className="lg:hidden flex items-center gap-2 px-3 py-2.5 bg-white sticky top-0 z-40 border-b border-shopee-border">
@@ -247,7 +247,7 @@ export default function CartPage() {
 
       {/* Mobile Sticky Summary */}
       {cart.length > 0 && (
-        <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-shopee-border z-[60] px-3 py-2 flex items-center justify-between">
+        <div className="lg:hidden fixed bottom-14 left-0 right-0 bg-white border-t border-shopee-border z-[60] px-3 py-2 flex items-center justify-between">
           <div>
             <p className="text-xs text-shopee-text-secondary">Total ({totalItems} Produk)</p>
             <p className="text-lg text-shopee-orange font-medium">{formatPrice(totalPrice)}</p>

@@ -267,7 +267,7 @@ export default function CheckoutPage() {
       </main>
 
       {/* Mobile Sticky Summary */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-shopee-border z-[60] px-3 py-2">
+      <div className="lg:hidden fixed bottom-14 left-0 right-0 bg-white border-t border-shopee-border z-[60] px-3 py-2">
         <div className="flex items-center justify-between mb-2">
           <span className="text-xs text-shopee-text-secondary">Total Pembayaran</span>
           <span className="text-lg text-shopee-orange font-medium">{formatPrice(total)}</span>
