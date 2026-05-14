@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "./components/layout/AuthProvider";
 import TopBar from "./components/layout/TopBar";
-import TelegramFloat from "./components/layout/TelegramFloat";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,7 +26,6 @@ export default function RootLayout({
         <AuthProvider>
           <TopBar />
           {children}
-          <TelegramFloat />
         </AuthProvider>
       </body>
     </html>
