@@ -30,7 +30,7 @@ export default function DealsPage() {
 
         {/* Deals Hero Banner */}
         <div className="max-w-[1200px] mx-auto px-0 lg:px-4">
-          <div className="bg-gradient-to-r from-shopee-orange via-[#FF6B4A] to-shopee-yellow px-4 py-6 lg:rounded-sm text-white">
+          <div className="bg-gradient-to-r from-shopee-orange via-[#5DADE2] to-shopee-yellow px-4 py-6 lg:rounded-sm text-white">
             <div className="flex items-center gap-2 mb-1">
               <Tag className="w-5 h-5" />
               <span className="font-bold text-lg uppercase tracking-wide">Murah Meriah</span>
@@ -110,7 +110,7 @@ export default function DealsPage() {
             <p className="text-sm text-shopee-text-secondary">Udah liat semua deals hari ini?</p>
             <Link
               href="/"
-              className="inline-block mt-2 px-6 py-2 bg-shopee-orange text-white text-sm font-medium rounded-sm hover:bg-[#D7391D] transition-colors"
+              className="inline-block mt-2 px-6 py-2 bg-shopee-orange text-white text-sm font-medium rounded-sm hover:bg-[#1A7BD4] transition-colors"
             >
               Lihat Produk Lainnya
             </Link>

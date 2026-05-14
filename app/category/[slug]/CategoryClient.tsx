@@ -328,7 +328,7 @@ export default function CategoryClient({ slug }: CategoryClientProps) {
               ) : (
                 <div className="bg-white rounded-sm py-16 text-center">
                   <p className="text-shopee-text-secondary text-sm">Tidak ada produk yang cocok dengan filter</p>
-                  <button onClick={clearFilters} className="mt-3 px-6 py-2 bg-shopee-orange text-white text-sm rounded-sm hover:bg-[#D7391D]">
+                  <button onClick={clearFilters} className="mt-3 px-6 py-2 bg-shopee-orange text-white text-sm rounded-sm hover:bg-[#1A7BD4]">
                     Reset Filter
                   </button>
                 </div>

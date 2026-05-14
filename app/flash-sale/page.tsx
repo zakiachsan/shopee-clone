@@ -53,7 +53,7 @@ export default function FlashSalePage() {
 
         {/* Flash Sale Banner */}
         <div className="max-w-[1200px] mx-auto px-0 lg:px-4">
-          <div className="bg-gradient-to-r from-shopee-orange to-[#FF7337] px-4 py-6 lg:rounded-sm text-white">
+          <div className="bg-gradient-to-r from-shopee-orange to-[#5DADE2] px-4 py-6 lg:rounded-sm text-white">
             <div className="flex items-center gap-2 mb-2">
               <Zap className="w-6 h-6 fill-white" />
               <span className="font-bold text-xl uppercase tracking-tight">Flash Sale</span>
@@ -90,9 +90,9 @@ export default function FlashSalePage() {
                 <div className="p-2">
                   <p className="text-shopee-orange font-medium text-sm">{formatPrice(product.price)}</p>
                   <div className="mt-2 relative">
-                    <div className="h-4 md:h-5 bg-[#FFBDA6] rounded-full overflow-hidden relative">
+                    <div className="h-4 md:h-5 bg-[#AED6F1] rounded-full overflow-hidden relative">
                       <div
-                        className="h-full bg-gradient-to-r from-shopee-orange to-[#FF7337] rounded-full transition-all duration-1000"
+                        className="h-full bg-gradient-to-r from-shopee-orange to-[#5DADE2] rounded-full transition-all duration-1000"
                         style={{ width: `${(idx % 5 + 1) * 20}%` }}
                       />
                       <span className="absolute inset-0 flex items-center justify-center text-[9px] md:text-[10px] text-white font-medium drop-shadow">

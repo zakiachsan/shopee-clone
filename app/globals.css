@@ -10,8 +10,8 @@
   --font-sans: var(--font-inter);
   --font-heading: var(--font-inter);
   
-  --color-shopee-orange: #EE4D2D;
-  --color-shopee-orange-light: #FFF5F1;
+  --color-shopee-orange: #2D96F6;
+  --color-shopee-orange-light: #E8F4FD;
   --color-shopee-yellow: #F69113;
   --color-shopee-green: #26AA99;
   --color-shopee-gray: #F5F5F5;
@@ -49,18 +49,18 @@
   --card-foreground: #222222;
   --popover: #FFFFFF;
   --popover-foreground: #222222;
-  --primary: #EE4D2D;
+  --primary: #2D96F6;
   --primary-foreground: #FFFFFF;
   --secondary: #F5F5F5;
   --secondary-foreground: #222222;
   --muted: #F5F5F5;
   --muted-foreground: #757575;
-  --accent: #FFF5F1;
-  --accent-foreground: #EE4D2D;
-  --destructive: #EE4D2D;
+  --accent: #E8F4FD;
+  --accent-foreground: #2D96F6;
+  --destructive: #2D96F6;
   --border: #E8E8E8;
   --input: #E8E8E8;
-  --ring: #EE4D2D;
+  --ring: #2D96F6;
   --radius: 0.25rem;
 }
 

@@ -86,9 +86,9 @@ function FlashSaleCard({ product, index }: { product: Product; index: number }) 
 
         {/* Progress bar */}
         <div className="mt-2 relative">
-          <div className="h-4 md:h-5 bg-[#FFBDA6] rounded-full overflow-hidden relative">
+          <div className="h-4 md:h-5 bg-[#AED6F1] rounded-full overflow-hidden relative">
             <div
-              className="h-full bg-gradient-to-r from-shopee-orange to-[#FF7337] rounded-full transition-all duration-1000"
+              className="h-full bg-gradient-to-r from-shopee-orange to-[#5DADE2] rounded-full transition-all duration-1000"
               style={{ width: `${soldPercent}%` }}
             />
             <span className="absolute inset-0 flex items-center justify-center text-[9px] md:text-[10px] text-white font-medium drop-shadow">

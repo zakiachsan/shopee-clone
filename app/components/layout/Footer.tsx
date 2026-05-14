@@ -41,8 +41,9 @@ export default function Footer() {
             <ul className="space-y-2 text-xs text-shopee-text-secondary">
               <li className="hover:text-shopee-orange cursor-pointer">Facebook</li>
               <li className="hover:text-shopee-orange cursor-pointer">Instagram</li>
-              <li className="hover:text-shopee-orange cursor-pointer">Twitter</li>
+              <li className="hover:text-shopee-orange cursor-pointer">TikTok</li>
               <li className="hover:text-shopee-orange cursor-pointer">YouTube</li>
+              <li className="hover:text-shopee-orange cursor-pointer">Telegram</li>
             </ul>
           </div>
         </div>

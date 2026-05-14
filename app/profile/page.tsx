@@ -15,34 +15,38 @@ import {
   ShoppingBag,
   Truck,
   PackageCheck,
+  LogOut,
 } from "lucide-react";
 import Header from "@/app/components/layout/Header";
 import BottomNav from "@/app/components/layout/BottomNav";
+import { useAuth } from "@/app/components/layout/AuthProvider";
 
 const menuGroups = [
   {
     title: "Pesanan Saya",
     items: [
-      { icon: ClipboardList, label: "Semua Pesanan", href: "#" },
-      { icon: ShoppingBag, label: "Menunggu Pembayaran", href: "#" },
-      { icon: PackageCheck, label: "Dikemas", href: "#" },
-      { icon: Truck, label: "Dikirim", href: "#" },
-      { icon: Star, label: "Selesai", href: "#" },
+      { icon: ClipboardList, label: "Semua Pesanan", href: "/profile/orders" },
+      { icon: ShoppingBag, label: "Menunggu Pembayaran", href: "/profile/orders?status=unpaid" },
+      { icon: PackageCheck, label: "Dikemas", href: "/profile/orders?status=packed" },
+      { icon: Truck, label: "Dikirim", href: "/profile/orders?status=shipped" },
+      { icon: Star, label: "Selesai", href: "/profile/orders?status=completed" },
     ],
   },
   {
     title: "Layanan Saya",
     items: [
-      { icon: Heart, label: "Favorit Saya", href: "#" },
-      { icon: Bell, label: "Notifikasi", href: "#" },
-      { icon: MapPin, label: "Alamat Pengiriman", href: "#" },
-      { icon: Settings, label: "Pengaturan", href: "#" },
-      { icon: HelpCircle, label: "Pusat Bantuan", href: "#" },
+      { icon: Heart, label: "Favorit Saya", href: "/profile/favorites" },
+      { icon: Bell, label: "Notifikasi", href: "/profile/notifications" },
+      { icon: MapPin, label: "Alamat Pengiriman", href: "/profile/address" },
+      { icon: Settings, label: "Pengaturan", href: "/profile/settings" },
+      { icon: HelpCircle, label: "Pusat Bantuan", href: "/profile/help" },
     ],
   },
 ];
 
 export default function ProfilePage() {
+  const { user, logout, loginOpen, openLogin, closeLogin } = useAuth();
+
   return (
     <>
       <Header />
@@ -64,8 +68,8 @@ export default function ProfilePage() {
                 <User className="w-7 h-7 text-white" />
               </div>
               <div className="flex-1">
-                <p className="text-white font-medium text-base">Pengguna Baru</p>
-                <p className="text-white/80 text-xs">+62 812-3456-7890</p>
+                <p className="text-white font-medium text-base">{user?.name || "Pengguna Baru"}</p>
+                <p className="text-white/80 text-xs">{user ? `+62 ${user.phone}` : "+62 812-3456-7890"}</p>
               </div>
               <Link
                 href="#"
@@ -137,6 +141,27 @@ export default function ProfilePage() {
                 <ChevronRight className="w-4 h-4 text-shopee-text-secondary" />
               </Link>
             ))}
+          </div>
+
+          {/* Logout CTA */}
+          <div className="mt-3 bg-white lg:rounded-sm p-4">
+            {user ? (
+              <button
+                onClick={logout}
+                className="w-full py-3 bg-red-50 text-red-500 text-sm font-medium rounded-sm hover:bg-red-100 transition-colors flex items-center justify-center gap-2"
+              >
+                <LogOut className="w-4 h-4" />
+                Keluar Akun
+              </button>
+            ) : (
+              <button
+                onClick={openLogin}
+                className="w-full py-3 bg-shopee-orange text-white text-sm font-medium rounded-sm hover:bg-[#1A7BD4] transition-colors flex items-center justify-center gap-2"
+              >
+                <User className="w-4 h-4" />
+                Masuk / Daftar
+              </button>
+            )}
           </div>
         </div>
       </main>

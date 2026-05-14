@@ -204,7 +204,7 @@ export default function CartPage() {
               {cart.length === 0 && (
                 <div className="bg-white py-16 text-center">
                   <p className="text-shopee-text-secondary text-sm">Keranjang belanjamu masih kosong</p>
-                  <Link href="/" className="inline-block mt-3 px-6 py-2 bg-shopee-orange text-white text-sm rounded-sm hover:bg-[#D7391D]">
+                  <Link href="/" className="inline-block mt-3 px-6 py-2 bg-shopee-orange text-white text-sm rounded-sm hover:bg-[#1A7BD4]">
                     Mulai Belanja
                   </Link>
                 </div>
@@ -233,7 +233,7 @@ export default function CartPage() {
                   href="/checkout"
                   className={`mt-4 w-full h-11 rounded-sm font-medium flex items-center justify-center transition-colors ${
                     selected.length > 0
-                      ? "bg-shopee-orange hover:bg-[#D7391D] text-white"
+                      ? "bg-shopee-orange hover:bg-[#1A7BD4] text-white"
                       : "bg-shopee-border text-shopee-text-secondary cursor-not-allowed"
                   }`}
                 >

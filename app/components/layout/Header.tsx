@@ -45,7 +45,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 cursor-pointer">
             <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <text x="0" y="28" fontFamily="Arial, sans-serif" fontWeight="900" fontSize="28" fill="#EE4D2D">
+              <text x="0" y="28" fontFamily="Arial, sans-serif" fontWeight="900" fontSize="28" fill="#2D96F6">
                 SHOPEE
               </text>
               <text x="0" y="38" fontFamily="Arial, sans-serif" fontWeight="400" fontSize="8" fill="#757575" letterSpacing="2">
@@ -72,7 +72,7 @@ export default function Header() {
                 />
               </div>
               <button
-                className="bg-shopee-orange hover:bg-[#D7391D] text-white px-6 py-2.5 transition-colors"
+                className="bg-shopee-orange hover:bg-[#1A7BD4] text-white px-6 py-2.5 transition-colors"
                 onClick={() => handleSearch()}
               >
                 <Search className="w-5 h-5" />

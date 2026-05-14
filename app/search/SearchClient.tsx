@@ -75,7 +75,7 @@ export default function SearchClient() {
           ) : (
             <div className="bg-white rounded-sm py-16 text-center">
               <p className="text-shopee-text-secondary text-sm">Tidak ada produk yang cocok dengan &quot;{title}&quot;</p>
-              <Link href="/" className="inline-block mt-3 px-6 py-2 bg-shopee-orange text-white text-sm rounded-sm hover:bg-[#D7391D]">
+              <Link href="/" className="inline-block mt-3 px-6 py-2 bg-shopee-orange text-white text-sm rounded-sm hover:bg-[#1A7BD4]">
                 Kembali ke Beranda
               </Link>
             </div>

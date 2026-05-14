@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "./components/layout/AuthProvider";
+import TopBar from "./components/layout/TopBar";
+import TelegramFloat from "./components/layout/TelegramFloat";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,7 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${inter.variable} antialiased`} suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col" suppressHydrationWarning>{children}</body>
+      <body className="min-h-screen flex flex-col" suppressHydrationWarning>
+        <AuthProvider>
+          <TopBar />
+          {children}
+          <TelegramFloat />
+        </AuthProvider>
+      </body>
     </html>
   );
 }

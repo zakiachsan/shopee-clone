@@ -230,7 +230,7 @@ export default function ProductClient({ id }: { id: number }) {
                     <ShoppingCart className="w-5 h-5" />
                     Masukkan Keranjang
                   </button>
-                  <Link href="/checkout" className="flex-1 h-12 bg-shopee-orange hover:bg-[#D7391D] text-white font-medium rounded-sm transition-colors flex items-center justify-center gap-2">
+                  <Link href="/checkout" className="flex-1 h-12 bg-shopee-orange hover:bg-[#1A7BD4] text-white font-medium rounded-sm transition-colors flex items-center justify-center gap-2">
                     <Zap className="w-5 h-5" />
                     Beli Sekarang
                   </Link>
